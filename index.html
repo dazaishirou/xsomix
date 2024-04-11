@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Cristhian Rocha</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+
+
+
+    <!-- edit [about] below to change the text on the browser tab -->
+    <title>quartz.</title>
+
+    <!-- replace [https://assets.tumblr.com/images/default_avatar/pyramid_open_128.png] below with an image URL to have a custom favicon 
+     favicon = the small icon on browser tabs; by default it's your pfp. -->
+    <style>
+        figure {
+            margin: 0
+        }
+        
+        .tmblr-iframe {
+            position: absolute
+        }
+        
+        .tmblr-iframe.hide {
+            display: none
+        }
+        
+        .tmblr-iframe--amp-cta-button {
+            visibility: hidden;
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100
+        }
+        
+        .tmblr-iframe--amp-cta-button.tmblr-iframe--loaded {
+            visibility: visible;
+            animation: iframe-app-cta-transition .2s ease-out
+        }
+    </style>
+    <link rel="stylesheet" media="screen" href="https://assets.tumblr.com/client/prod/standalone/blog-network-npf/index.build.css?_v=f085dde138e244526309d4673db67b4c">
+    <link rel="shortcut icon" href="https://i.ibb.co/0C0Khw3/tumblr-9f2c806f05da67a0c6314f8aa70d4b2c-3aabf18d-540.webp" />
+
+    <style type="text/css">
+         :root {
+            /** [HERON] CSS STYLING
+    With the use of CSS variables, you don't need to scroll through the whole code to edit the appearance of the page; you can do so in this single block!
+
+    
+****************************************** GLOBAL APPEARANCE OPTIONS **/
+            --mainfont: nunito;
+            --scrollbar: #edc291;
+            --text-highlight: #edc291;
+            --BGcolour: #eaeaea;
+            /** only shows up if no bg img below **/
+            --BGimageURL: url("https://i.imgur.com/QgkjR2K.gif"), url("https://images.unsplash.com/photo-1608914981498-5b8431aa92b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+            /** replace the word [XUE] with your own background image URL **/
+            --BGwallpaper: cover;
+            /**  auto = repeated bg
+         cover = stretched as a wallpaper **/
+            /******************************************************* THE BASICS **/
+            /** tooltips = the small pop-up next to your mouse
+        when you hover over links **/
+            --tooltipBG: 0, 0, 0;
+            /** RGB colour values **/
+            --tooltipColour: #ffffff;
+            /******************************************************* MAIN CONTENT **/
+            --windowBG: #eaeaea;
+            /** grey area **/
+            --contentBG: #ffffff;
+            --txtcolour: #555555;
+            /** default font colour **/
+            --translucent-border: 255, 255, 255;
+            /** RGB values **/
+            /** header icon **/
+            --header-iconBG: #66a9ba;
+            /* deep blue by default */
+            --header-icon: #ffffff;
+            --header-icon-code: '\ed12';
+            /** default: wheat **/
+            /** 1. go to https://cappuccicons.com/
+        2. scroll down & choose the icon you like
+        3. copy the icon code and replace the one above **/
+            /********************************************************* INTRO PAGE **/
+            /** left photo **/
+            --abt-photoURL: url("https://i.ibb.co/3zjjC2V/Screenshot-39.png");
+            /** basic info intro (below photo) **/
+            --abt-label: #edc291;
+            /** "name", "location", etc **/
+            /** biography **/
+            --abt-header: #abcadb;
+            /** 1st letter and h2 blocks **/
+            --abt-bold: #6a7d99;
+            /** bolded text **/
+            --abt-italic: #aaaaaa;
+            /** italic text **/
+            --abt-link-BG: #f1f1f1;
+            /** links **/
+            --abt-link-txt: #444444;
+            --abt-blockquote-BG: #f1f1f1;
+            --abt-blockquote-border: #dddddd;
+            --abt-blockquote-quotationmarks: #cacaca;
+            /** quotation mark icon **/
+            /********************************************************** TAGS LIST **/
+            /** left photo **/
+            --tag-photoURL: url("https://images.unsplash.com/photo-1608914998172-587b1b25f247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+            /** tag block categories
+        There are three colour ways that are alternated. **/
+            --tag-category-A-BG: #66a9ba;
+            --tag-category-A-txt: #ffffff;
+            --tag-category-B-BG: #d9ab5b;
+            --tag-category-B-txt: #ffffff;
+            --tag-category-C-BG: #f0e3ad;
+            --tag-category-C-txt: #9c6527;
+            /** tag link buttons **/
+            --tag-link-BG: #f6f6f6;
+            --tag-link-txt: #444444;
+            --tag-link-border: #dadada;
+            --tag-link-BG-hovered: #f8f8f8;
+            /** when hovered **/
+            --tag-link-txt-hovered: #000000;
+            /*********************************************************** BLOGROLL **/
+            /** left photo **/
+            --fol-photoURL: url("https://images.unsplash.com/photo-1608914970686-59282a504703?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+            /** visit blog icon link **/
+            --fol-visit-icon-BG: #eaeaea;
+            --fol-visit-icon: #aaaaaa;
+            /** follow blog icon link **/
+            --fol-follow-icon-BG: #66a9ba;
+            --fol-follow-icon: #ffffff;
+            --fol-info-username: #444444;
+            --fol-info-blogtitle: #aaaaaa;
+            /*********************************************************** CONTACT **/
+            /** left photo **/
+            --qna-photoURL: url("https://images.unsplash.com/photo-1608914997960-84426bb5b313?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+            /** the small QNA before each question **/
+            --qna-label-BG: #f0e3ad;
+            --qna-label-txt: #9c6527;
+            /** active qna question bg & text **/
+            --qna-active-qn-BG: #f0e3ad;
+            --qna-active-qn-txt: #9c6527;
+        }
+        /** ======================================================== THE BASICS **/
+        
+        body {
+            background-color: var(--BGcolour);
+            background-image: var(--BGimageURL);
+            background-size: var(--BGwallpaper);
+            background-attachment: fixed;
+            font-family: var(--mainfont), sans-serif;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        p:first-child {
+            margin-top: 0;
+        }
+        
+        p:last-child {
+            margin-bottom: 0;
+        }
+        /** tool tips **/
+        
+        #s-m-t-tooltip {
+            z-index: 1000000000000000000000000000000000000;
+            max-width: 300px;
+            letter-spacing: 1px;
+            font-family: nunito;
+            font-size: 10px;
+            padding: 4px 8px;
+            margin: 20px 0 0 10px;
+            border-radius: 7px;
+            background-color: rgba(var(--tooltipBG), 0.8);
+            color: var(--tooltipColour);
+        }
+        /** scrollbar **/
+        
+         ::-webkit-scrollbar {
+            width: 14px;
+        }
+        
+         ::-webkit-scrollbar-track-piece {
+            background-color: var(--contentBG);
+        }
+        
+         ::-webkit-scrollbar-thumb:vertical {
+            width: 6px;
+            border: 4px solid var(--contentBG);
+            background: var(--scrollbar);
+            border-radius: 100px;
+        }
+        /** text selection **/
+        
+         ::selection {
+            color: #ffffff;
+            background-color: var(--text-highlight);
+        }
+        
+         ::-moz-selection {
+            color: #ffffff;
+            background-color: var(--text-highlight);
+        }
+        
+         ::-webkit-selection {
+            color: #ffffff;
+            background-color: var(--text-highlight);
+        }
+        /** tumblr controls **/
+        
+        iframe#tumblr_controls,
+        .iframe-controls--desktop {
+            position: fixed!important;
+            top: 8px!important;
+            right: 8px!important;
+            transform: scale(0.8);
+            -webkit-transform-origin: top right;
+            -ms-transform-origin: top right;
+            transform-origin: top right;
+            z-index: 1500!important;
+        }
+        /** ============================================== MAIN CONTENT WINDOW **/
+        
+        .maincon {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #main {
+            padding: 30px;
+            width: 540px;
+            background: #888;
+            position: fixed;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: calc(50% - 300px);
+            /** half of the width **/
+            background-color: rgba(var(--translucent-border), 0.3);
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(var(--translucent-border), 0.6);
+        }
+        /** ========================================= HEADER / NAVIGATION BAR **/
+        
+        .header {
+            width: 540px;
+            height: 60px;
+            background-color: var(--contentBG);
+            overflow: hidden;
+        }
+        
+        .header-left {
+            background-color: var(--header-iconBG);
+            width: 90px;
+            height: 60px;
+            float: left;
+        }
+        
+        .header-left-cov {
+            background-color: var(--contentBG);
+            width: 70px;
+            height: 70px;
+            margin: -5px 60px;
+            border-radius: 100px;
+        }
+        
+        .header-icon {
+            position: absolute;
+            width: 20px;
+            margin: 20px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: var(--header-icon);
+        }
+        
+        .header-icon:before {
+            content: var(--header-icon-code);
+            font-family: 'cappuccicons';
+        }
+        
+        .header-nav {
+            display: flex;
+        }
+        /** navigation buttons **/
+        
+        .hbtn {
+            font-size: 12px;
+            cursor: pointer;
+            margin: 20px 10px 20px 0;
+            line-height: 20px;
+            padding: 0 6px;
+            border-radius: 4px;
+            transition: 0.6s;
+            color: var(--nav-colour);
+        }
+        
+        .hbtn:hover {
+            color: var(--nav-hover-colour);
+            background-color: var(--nav-hover-BG);
+        }
+        
+        .hbtn-active {
+            color: var(--nav-active-colour);
+            background-color: var(--nav-active-BG);
+        }
+        
+        .hbtn-active:hover {
+            color: var(--nav-active-colour);
+            background-color: var(--nav-active-BG);
+        }
+        
+        .hpfp {
+            position: absolute;
+            margin: 15px 405px;
+            border-radius: 6px;
+        }
+        /** ===================================================== CAROUSEL PANELS **/
+        
+        .content {
+            border: 20px solid var(--windowBG);
+            background-color: var(--windowBG);
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .allviews {
+            transition: 0.6s ease-in-out;
+            width: 2000px;
+            overflow-y: auto;
+            overflow: hidden;
+        }
+        
+        .view {
+            float: left;
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+        }
+        /** ============================================================== ABOUT **/
+        
+        .abt-layout {
+            height: 300px;
+        }
+        
+        .abt-basic {
+            width: 150px;
+            height: 100%;
+            float: left;
+            margin-right: 20px;
+        }
+        
+        .abt-photo {
+            background-image: var(--abt-photoURL);
+            background-size: cover;
+            background-position: center;
+            width: 150px;
+            height: 220px;
+            border-radius: 10px 10px 0 0;
+            display: block;
+        }
+        
+        .abt-pts {
+            background-color: var(--contentBG);
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .abt-ptline {
+            padding: 5px 10px;
+            text-align: right;
+            font-size: 12px;
+            border-bottom: 1px solid var(--windowBG);
+            color: var(--txtcolour);
+        }
+        
+        .abt-pttitle {
+            position: relative;
+            height: 0;
+            text-align: left;
+            line-height: 17px;
+            font-family: nunito;
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 1000;
+            color: var(--abt-label);
+        }
+        
+        .abt-bio {
+            width: 300px;
+            height: 260px;
+            overflow: hidden;
+            padding: 20px 10px 20px 20px;
+            background-color: var(--contentBG);
+            border-radius: 10px;
+        }
+        
+        .bio-graphy {
+            font-size: 12px;
+            line-height: 20px;
+            height: 260px;
+            overflow-y: auto;
+            padding-right: 10px;
+            text-align: justify;
+            color: var(--txtcolour);
+        }
+        
+        .bio-graphy:first-letter {
+            font-size: 40px;
+            float: left;
+            font-family: fredoka one;
+            color: var(--abt-header);
+            margin: 10px 6px 0 0;
+            text-transform: uppercase;
+        }
+        
+        .bio-graphy blockquote {
+            background-color: var(--abt-blockquote-BG);
+            border: 1px solid var(--abt-blockquote-border);
+            border-radius: 10px;
+            margin: 0;
+            font-size: 10px;
+            line-height: 18px;
+            padding: 10px 15px;
+        }
+        
+        .bio-graphy blockquote:before {
+            content: "\ec2b";
+            font-family: "cappuccicons";
+            width: 0;
+            height: 0;
+            position: relative;
+            color: var(--abt-blockquote-quotationmarks);
+            margin: 0 8px 0 0;
+            font-size: 10px;
+        }
+        
+        .bio-graphy blockquote a {
+            padding: 0;
+            background: transparent;
+        }
+        
+        .bio-graphy b,
+        strong,
+        .qna-block b,
+        strong {
+            color: var(--abt-bold);
+        }
+        
+        .bio-graphy a,
+        .qna-block a {
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 1000;
+            padding: 3px 5px;
+            border-radius: 4px;
+            margin: 0 2px 0 2px;
+            color: var(--abt-link-txt);
+            background-color: var(--abt-link-BG);
+        }
+        
+        .bio-graphy i,
+        em,
+        .qna-block i,
+        em {
+            color: var(--abt-italic);
+            font-style: normal;
+        }
+        
+        .bio-graphy h2 {
+            font-size: 14px;
+            font-family: fredoka one;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--abt-header);
+            margin: 20px 0 -5px 0;
+        }
+        
+        ul {
+            margin-left: -10px;
+            list-style-type: square;
+        }
+        
+        ol {
+            margin-left: -10px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        /** =========================================================== TAGSLIST **/
+        
+        .view-photo {
+            width: 150px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            float: left;
+            margin-right: 10px;
+        }
+        
+        .tag-photo {
+            background-image: var(--tag-photoURL);
+        }
+        
+        .tag-con {
+            width: 340px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .tag-con::-webkit-scrollbar-track-piece {
+            background-color: var(--windowBG);
+        }
+        
+        .tag-con::-webkit-scrollbar-thumb:vertical {
+            border: 4px solid var(--windowBG);
+        }
+        
+        .tag-block {
+            display: inline-block;
+            float: left;
+            margin: 0 0 10px 10px;
+            width: 150px;
+            font-size: 10px;
+            border-radius: 10px;
+        }
+        
+        .tag-block-first {
+            background-image: url(assets/20.webp);
+            background-size: cover;
+            float: left;
+            margin: 0 0 10px 10px;
+            width: 150px;
+            font-size: 10px;
+            border-radius: 10px;
+            height: 269px !important;
+            background-position-x: center;
+        }
+        
+        .tag-block-second {
+            background-image: url(assets/am.webp);
+            display: inline-block;
+            float: left;
+            margin: 0 0 10px 10px;
+            width: 150px;
+            font-size: 10px;
+            border-radius: 10px;
+            height: 130px;
+            background-size: cover;
+        }
+        
+        .tag-block-tirth {
+            background-image: url(assets/isa.webp);
+            display: inline-block;
+            float: left;
+            margin: 0 0 10px 10px;
+            width: 150px;
+            font-size: 10px;
+            border-radius: 10px;
+            height: 130px;
+            background-size: cover;
+        }
+        
+        .tag {
+            overflow: scroll;
+            height: 317px;
+            width: 340px;
+        }
+        
+        .tag-block-fifth {
+            background-image: url(assets/isax.webp);
+            display: inline-block;
+            float: left;
+            margin: 0 0 10px 10px;
+            width: 150px;
+            font-size: 10px;
+            border-radius: 10px;
+            height: 130px;
+            background-size: cover;
+        }
+        
+        .tag-block-fourth {
+            background-image: url(assets/woodsen.gif);
+            display: inline-block;
+            float: left;
+            margin: 0 0 10px 10px;
+            width: 150px;
+            font-size: 10px;
+            border-radius: 10px;
+            height: 130px;
+            background-size: cover;
+        }
+        
+        .tag-category {
+            padding: 6px 8px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 1000;
+            position: sticky;
+            top: 0;
+        }
+        
+        .tag-block:nth-child(3n+0) .tag-category {
+            background-color: var(--tag-category-A-BG);
+            color: var(--tag-category-A-txt);
+        }
+        
+        .tag-block:nth-child(3n+1) .tag-category {
+            background-color: var(--tag-category-B-BG);
+            color: var(--tag-category-B-txt);
+        }
+        
+        .tag-block:nth-child(3n+2) .tag-category {
+            background-color: var(--tag-category-C-BG);
+            color: var(--tag-category-C-txt);
+        }
+        
+        .tag-btn {
+            margin-top: 2px;
+            padding: 2px 6px;
+            transition: 0.3s ease-in-out;
+            border-left: 4px solid var(--tag-link-border);
+            background-color: var(--tag-link-BG);
+            color: var(--tag-link-txt);
+        }
+        
+        .tag-btn:hover {
+            background-color: var(--tag-link-BG-hovered);
+            color: var(--tag-link-txt-hovered);
+        }
+        
+        .tag-block:nth-child(3n+0) .tag-btn:hover {
+            border-left: 4px solid var(--tag-category-A-BG);
+        }
+        
+        .tag-block:nth-child(3n+1) .tag-btn:hover {
+            border-left: 4px solid var(--tag-category-B-BG);
+        }
+        
+        .tag-block:nth-child(3n+2) .tag-btn:hover {
+            border-left: 4px solid var(--tag-category-C-BG);
+        }
+        /** ========================================================== BLOGROLL **/
+        
+        .fol-photo {
+            background-image: var(--fol-photoURL);
+            margin-right: 20px;
+        }
+        
+        .fol-content::-webkit-scrollbar-track-piece {
+            background-color: var(--windowBG);
+        }
+        
+        .fol-content::-webkit-scrollbar-thumb:vertical {
+            border: 4px solid var(--windowBG);
+        }
+        
+        .fol-content {
+            padding-right: 10px;
+            float: left;
+            width: 320px;
+            max-height: 300px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        
+        .fol-block {
+            border-radius: 10px;
+            padding: 15px 0 15px 15px;
+            height: 40px;
+            background-color: var(--contentBG);
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        .fol-block:last-child {
+            margin-bottom: 0;
+        }
+        
+        .fol-actions {
+            width: 80px;
+            float: left;
+            margin: 8px 0;
+        }
+        
+        .fol-acticon {
+            float: left;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 28px;
+            border-radius: 7px;
+            margin-right: 10px;
+            font-size: 10px;
+        }
+        
+        .acticon1 {
+            background-color: var(--fol-visit-icon-BG);
+            color: var(--fol-visit-icon);
+        }
+        
+        .acticon2 {
+            background-color: var(--fol-follow-icon-BG);
+            color: var(--fol-follow-icon);
+        }
+        
+        .fol-pfp {
+            border-radius: 10px;
+            float: left;
+            margin-right: 15px;
+        }
+        
+        .fol-info {
+            width: 140px;
+            float: left;
+            position: relative;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            margin-right: 10px;
+        }
+        
+        .fol-info-un {
+            font-size: 14px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            color: var(--fol-info-username);
+        }
+        
+        .fol-info-ti {
+            font-size: 7px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            font-weight: 1000;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-bottom: 4px;
+            color: var(--fol-info-blogtitle);
+        }
+        /** ============================================================ CONTACT **/
+        
+        .qna-photo {
+            background-image: var(--qna-photoURL);
+            margin-right: 20px;
+        }
+        
+        .qna-content {
+            float: left;
+            width: 310px;
+            height: 300px;
+            overflow-y: auto;
+            padding-right: 20px;
+            font-size: 12px;
+        }
+        
+        .qna-content::-webkit-scrollbar-track-piece {
+            background-color: var(--windowBG);
+        }
+        
+        .qna-content::-webkit-scrollbar-thumb:vertical {
+            border: 4px solid var(--windowBG);
+        }
+        
+        .qna-block {
+            margin-bottom: 10px;
+        }
+        
+        .qna-block:last-child {
+            margin-bottom: 0;
+        }
+        
+        .qna-qn {
+            font-size: 13px;
+            line-height: 25px;
+            background-color: var(--contentBG);
+            border-radius: 10px;
+            padding: 10px 10px;
+            width: 280px;
+            cursor: pointer;
+            transition: 0.6s ease-in-out;
+        }
+        
+        .qna-qn:before {
+            content: "QNA";
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 1000;
+            padding: 3px 5px;
+            margin: 0 8px 0 0;
+            border-radius: 6px;
+            background-color: var(--qna-label-BG);
+            color: var(--qna-label-txt);
+        }
+        
+        .qna-ans {
+            background-color: var(--contentBG);
+            line-height: 18px;
+            padding: 10px 15px;
+            width: 270px;
+            border-radius: 0 0 10px 10px;
+            font-size: 11px;
+            display: none;
+        }
+        
+        .qna-qn-active {
+            border-radius: 10px 10px 0 0;
+            background-color: var(--qna-active-qn-BG);
+            color: var(--qna-active-qn-txt);
+        }
+        
+        .qna-notice {
+            line-height: 18px;
+            margin-bottom: 20px;
+            background-color: var(--contentBG);
+            padding: 20px;
+            width: 260px;
+            border-radius: 10px;
+        }
+        
+        .qna-notice-title {
+            font-size: 14px;
+            font-family: fredoka one;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--abt-header);
+            margin: 0 0 10px 0;
+        }
+    </style>
+    <script defer type="application/javascript" id="bilmur" data-provider="tumblr.com" data-service="blognetwork" data-customproperties='{"theme": ""}' nonce="7ChlMibLocEBFiXia08KgsPwKdE" src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202413"></script>
+    <script src="https://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=a8fadfa499d8cb7c3f8eefdf0b1adfdd"></script>
+    <link rel="stylesheet" type="text/css" href="https://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3">
+    <!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS -->
+    <!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. -->
+    <!-- Read more: http://ogp.me/ -->
+    <!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+    <!-- TWITTER TAGS -->
+
+    <!-- [EGRET] HTML CONTENT EDITING 
+     You will need to edit certain text from this point on to personalise this page as your own. -->
+
+    <div id="main">
+        <div class="header">
+            <!-- profile pic; can replace https://assets.tumblr.com/images/default_avatar/pyramid_open_30.png with another image URL if you want to use a different icon -->
+            <img class="hpfp" src="https://assets.tumblr.com/images/default_avatar/pyramid_open_30.png">
+
+            <!-- header icon -->
+            <!-- ie. the "return to blog" icon -->
+            <a title="return to blog" href="/">
+                <div class="header-icon"></div>
+            </a>
+            <div class="header-left">
+                <div class="header-left-cov"></div>
+            </div>
+
+            <div class="header-nav">
+                <!-- header navigation buttons -->
+                <!-- you can edit the titles of the sections below -->
+                <div class="hbtn hbtn-one hbtn-active"> about </div>
+                <div class="hbtn hbtn-two"> tags </div>
+                <div class="hbtn hbtn-three"> Friend </div>
+                <div class="hbtn hbtn-four"> </div>
+            </div>
+
+        </div>
+        <!--header-->
+
+
+        <div class="content">
+            <div class="allviews">
+
+                <div class="view">
+                    <!-- about me intro panel -------------------------------->
+                    <div class="abt-layout">
+
+                        <div class="abt-basic">
+                            <div class="abt-photo"></div>
+                            <div class="abt-pts">
+
+                                <!-- the simple intro points below the photo
+                 You can change the labels and what's shared about too. -->
+
+                                <!-- 1: name -->
+                                <div class="abt-ptline">
+                                    <div class="abt-pttitle">name</div>
+                                    Isabella
+                                </div>
+
+                                <!-- 2: location -->
+                                <div class="abt-ptline">
+                                    <div class="abt-pttitle">location</div>
+                                    Narnia
+                                </div>
+
+                                <!-- 3: status -->
+                                <div class="abt-ptline">
+                                    <div class="abt-pttitle">status</div>
+                                    I'm unstoppable
+                                </div>
+
+                            </div>
+                            <!--abt-pts-->
+                        </div>
+                        <!--abt-basic-->
+
+                        <div class="abt-bio">
+                            <div class="bio-graphy">
+
+                                <!-- Replace this text with your own bio --------------------------------->
+
+                                <p>"Love demands Suffering and Suffering needs love. When they say "something better is coming," I understand that it is not always about another person, it can also be: emotional stability, peace of mind, good times, dreams,
+                                    projects, maturity, a healthy body, and above all, self-love".</p>
+
+                                <p>"everyone says I look happy"<a href="">"when it feels right"</a></p>
+
+                                <blockquote>
+                                    나는 달리기 위해 태어났고 누구에게도 속하지 않아요
+                                </blockquote>
+
+
+
+                                <p>
+                                    <script language="JavaScript">
+                                        var fhs = document.createElement('script');
+                                        var fhs_id = "5670209";
+                                        var ref = ('' + document.referrer + '');
+                                        var pn = window.location;
+                                        var w_h = window.screen.width + " x " + window.screen.height;
+                                        fhs.src = "//freehostedscripts.net/ocounter.php?site=" + fhs_id + "&e1=&e2=&r=" + ref + "&wh=" + w_h + "&a=1&pn=" + pn + "";
+                                        document.head.appendChild(fhs);
+                                        document.write("<span id='o_" + fhs_id + "'></span>");
+                                    </script>
+                                    <script language="JavaScript">
+                                        var fhsh = document.createElement('script');
+                                        var fhs_id_h = "3367481";
+                                        fhsh.src = "//freehostedscripts.net/ocount.php?site=" + fhs_id_h + "&name=visitors&a=1";
+                                        document.head.appendChild(fhsh);
+                                        document.write("<span id='h_" + fhs_id_h + "'></span>");
+                                    </script>
+
+                                    <!-- end of biography space ----------------------------------------------->
+
+                            </div>
+                            <!--bio-graphy-->
+
+                        </div>
+                        <!--abt-bio-->
+                    </div>
+                    <!--abt-layout-->
+                </div>
+                <!-- view; intro -->
+
+
+                <div class="view">
+                    <!-- tags list panel ------------------------------------->
+                    <div class="view-photo tag-photo"></div>
+                    <div class="tag">
+
+
+
+                        <!--
+
+Each tag blog consists of a CATEGORY and the TAGS. Copy and paste the block below out of the comments for as many tag blocks you would like to add.
+        
+        <div class="tag-block">
+            <div class="tag-category"></div>
+            <a href="/tagged/"><div class="tag-btn">tag</div></a>
+            <a href="/tagged/"><div class="tag-btn">tag</div></a>
+            <a href="/tagged/"><div class="tag-btn">tag</div></a>
+            <a href="/tagged/"><div class="tag-btn">tag</div></a>
+        </div>
+        
+-->
+
+                        <div class="tag-block-first first">
+
+                        </div>
+
+                        <div class="tag-block-second">
+
+                        </div>
+
+                        <div class="tag-block-tirth">
+
+                        </div>
+
+                        <div class="tag-block-fifth">
+
+                        </div>
+
+
+                        <div class="tag-block-fourth">
+
+                        </div>
+
+
+                    </div>
+                    <!--tag-con-->
+                </div>
+                <!-- end of tagslist panel -->
+
+
+                <div class="view">
+                    <!-- following panel -------------------------------->
+                    <div class="view-photo fol-photo"></div>
+
+                    <!-- no need to edit anything in the blogroll section -->
+                    <div class="fol-content">
+                        <div class="fol-block">
+                            <img class="fol-pfp" src="https://i.ibb.co/ydYryn2/El-texto-del-p-rrafo-5.png">
+                            <div class="fol-info">
+                                <div class="fol-info-un">Alu</div>
+                                <div class="fol-info-ti">Friend</div>
+                            </div>
+                            <!--info-->
+                            <div class="fol-actions">
+                                <a href="https://xat.me/Aluuuuuuuuu" title="visit blog">
+                                    <div class="fol-acticon acticon1"><i class="cp cp-exit-top-right"></i></div>
+                                </a>
+                                <a href="https://xat.me/Aluuuuuuuuu" title="follow">
+                                    <div class="fol-acticon acticon2"><i class="cp cp-user"></i></div>
+                                </a>
+                            </div>
+                            <!--actions-->
+                        </div>
+                        <!--fol-block-->
+                        <div class="fol-block">
+                            <img class="fol-pfp" src="https://i.ibb.co/42DwY5y/El-texto-del-p-rrafo-2.png">
+                            <div class="fol-info">
+                                <div class="fol-info-un">Lala</div>
+                                <div class="fol-info-ti">Friend</div>
+                            </div>
+                            <!--info-->
+                            <div class="fol-actions">
+                                <a href="https://xat.me/ShatteredDoll" title="visit blog">
+                                    <div class="fol-acticon acticon1"><i class="cp cp-exit-top-right"></i></div>
+                                </a>
+                                <a href="https://xat.me/ShatteredDoll" title="follow">
+                                    <div class="fol-acticon acticon2"><i class="cp cp-user"></i></div>
+                                </a>
+                            </div>
+                            <!--actions-->
+                        </div>
+                        <!--fol-block-->
+                        <div class="fol-block">
+                            <img class="fol-pfp" src="https://i.ibb.co/5905JD4/El-texto-del-p-rrafo-3.png">
+                            <div class="fol-info">
+                                <div class="fol-info-un">Sivori</div>
+                                <div class="fol-info-ti">Friend</div>
+                            </div>
+                            <!--info-->
+                            <div class="fol-actions">
+                                <a href="https://xat.me/Chiquinsivori" title="visit blog">
+                                    <div class="fol-acticon acticon1"><i class="cp cp-exit-top-right"></i></div>
+                                </a>
+                                <a href="https://xat.me/Chiquinsivori" title="follow">
+                                    <div class="fol-acticon acticon2"><i class="cp cp-user"></i></div>
+                                </a>
+                            </div>
+                            <!--actions-->
+                        </div>
+                       <!--fol-block-->
+                        <div class="fol-block">
+                            <img class="fol-pfp" src="https://i.ibb.co/f40v091/Dise-o-sin-t-tulo-5.png">
+                            <div class="fol-info">
+                                <div class="fol-info-un">Sovereign</div>
+                                <div class="fol-info-ti">Friends</div>
+                            </div>
+                            <!--info-->
+                            <div class="fol-actions">
+                                <a href="https://xat.me/zSovereign" title="visit blog">
+                                    <div class="fol-acticon acticon1"><i class="cp cp-exit-top-right"></i></div>
+                                </a>
+                                <a href="https://xat.me/zSovereign" title="follow">
+                                    <div class="fol-acticon acticon2"><i class="cp cp-user"></i></div>
+                                </a>
+                            </div>
+                            <!--actions-->
+                        </div>
+                      
+                        <!--fol-block-->
+                        <div class="fol-block">
+                            <img class="fol-pfp" src="https://i.ibb.co/s5cHBrv/El-texto-del-p-rrafo.png">
+                            <div class="fol-info">
+                                <div class="fol-info-un">Drugs</div>
+                                <div class="fol-info-ti">Friends</div>
+                            </div>
+                            <!--info-->
+                            <div class="fol-actions">
+                                <a href="https://xat.me/frieren" title="visit blog">
+                                    <div class="fol-acticon acticon1"><i class="cp cp-exit-top-right"></i></div>
+                                </a>
+                                <a href="https://xat.me/frieren" title="follow">
+                                    <div class="fol-acticon acticon2"><i class="cp cp-user"></i></div>
+                                </a>
+                            </div>
+                            <!--actions-->
+                        </div>
+                        <!--fol-block-->
+                        <div class="fol-block">
+                            <img class="fol-pfp" src="https://i.ibb.co/Yfdg188/El-texto-del-p-rrafo-6.png">
+                            <div class="fol-info">
+                                <div class="fol-info-un">Kenza</div>
+                                <div class="fol-info-ti">Friends</div>
+                            </div>
+                            <!--info-->
+                            <div class="fol-actions">
+                                <a href="https://xat.me/Kenza" title="visit blog">
+                                    <div class="fol-acticon acticon1"><i class="cp cp-exit-top-right"></i></div>
+                                </a>
+                                <a href="https://xat.me/Kenza" title="follow">
+                                    <div class="fol-acticon acticon2"><i class="cp cp-user"></i></div>
+                                </a>
+                            </div>
+                            <!--actions-->
+                        </div>
+                        <!--fol-block-->
+                        <div class="fol-block">
+                            <img class="fol-pfp" src="https://i.ibb.co/ph7DDZ0/El-texto-del-p-rrafo-4.png">
+                            <div class="fol-info">
+                                <div class="fol-info-un">Miguel</div>
+                                <div class="fol-info-ti">Friends</div>
+                            </div>
+                            <!--info-->
+                            <div class="fol-actions">
+                                <a href="https://xat.me/RojoNyuCaimieChan" title="visit blog">
+                                    <div class="fol-acticon acticon1"><i class="cp cp-exit-top-right"></i></div>
+                                </a>
+                                <a href="https://xat.me/RojoNyuCaimieChan" title="follow">
+                                    <div class="fol-acticon acticon2"><i class="cp cp-user"></i></div>
+                                </a>
+                            </div>
+                            <!--actions-->
+                        </div>
+                        <!--fol-block-->
+                        <!--actions-->
+                    </div>
+                    <!--fol-block-->
+                </div>
+                <!--info-->
+                <div class="fol-actions">
+                    <a href="" title="visit blog">
+                        <div class="fol-acticon acticon1"><i class="cp cp-exit-top-right"></i></div>
+                    </a>
+                    <a href="" title="follow">
+                        <div class="fol-acticon acticon2"><i class="cp cp-user"></i></div>
+                    </a>
+                </div>
+                <!--actions-->
+            </div>
+            <!--fol-block-->
+        </div>
+        <!--info-->
+        <!--actions-->
+    </div>
+    <!--fol-block-->
+    </div>
+    <!--fol-content-->
+
+    </div>
+    <!-- end of following panel -->
+
+
+
+
+    </div>
+    <!--contentview-->
+    </div>
+    <!--content-->
+    </div>
+    <!--main-->
+
+    <a title="shirou" href="https://xat.me/xGrimmjow">
+        <div style="position:fixed;bottom:12px;right:12px;font-size:9px;letter-spacing:1px;background-color:#fff;color:#000;padding: 4px 7px;border-radius:5px;cursor:pointer;font-weight:1000">shirou</div>
+    </a>
+
+
+    <iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe>
+    <script type="text/javascript">
+        (function() {
+            var analytics_frame = document.getElementById('ga_target');
+            var analytics_iframe_loaded;
+            var user_logged_in;
+            var blog_is_nsfw = 'No';
+
+            var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+            var eventer = window[eventMethod];
+            var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+            eventer(messageEvent, function(e) {
+                var message = (e.data && e.data.split) ? e.data.split(';') : '';
+                switch (message[0]) {
+                    case 'analytics_iframe_loaded':
+                        analytics_iframe_loaded = true;
+                        postCSMessage();
+                        postGAMessage();
+                        break;
+                    case 'user_logged_in':
+                        user_logged_in = message[1];
+                        postGAMessage();
+                        break;
+                }
+            }, false);
+
+            analytics_frame.src = "https://assets.tumblr.com/analytics.html?_v=9f5febfd57a8a649c598d888f2d9e062#" +
+                "https://xueprevs.tumblr.com";
+
+            function postGAMessage() {
+                if (analytics_iframe_loaded && user_logged_in) {
+                    var is_ajax = false;
+                    analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/quartz?route=custom_page'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
+                }
+            }
+
+            function postCSMessage() {
+                COMSCORE = true;
+                analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+            }
+        })();
+    </script>
+    <script type="text/javascript" nonce="7ChlMibLocEBFiXia08KgsPwKdE">
+        ! function(s) {
+            s.src = 'https://px.srvcs.tumblr.com/impixu?T=1711920914&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDovL3h1ZXByZXZzLnR1bWJsci5jb20vcXVhcnR6IiwicmVxdHlwZSI6MCwicm91dGUiOiJjdXN0b21fcGFnZSJ9&U=DDONEMMCBF&K=ece4cfa0edcba849de30fbb1ae06967781f7f7e20daef166933feb1c54929c53&R=https%3A%2F%2Fricecodes.tumblr.com%2F'.replace(/&R=[^&$]*/, '').concat('&R=' + escape(document.referrer)).slice(0, 2000).replace(/%.?.?$/, '');
+        }(new Image());
+    </script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1711920914&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDovL3h1ZXByZXZzLnR1bWJsci5jb20vcXVhcnR6IiwicmVxdHlwZSI6MCwicm91dGUiOiJjdXN0b21fcGFnZSIsIm5vc2NyaXB0IjoxfQ==&U=DDONEMMCBF&K=0384664de41c03acd5f31556a54ad275fb454a2cfa049322b42b407943c47bdc&R=https%3A%2F%2Fricecodes.tumblr.com%2F"></noscript>
+    <noscript id="bootloader" data-bootstrap="{&quot;Components&quot;:{&quot;PostActivity&quot;:[],&quot;NotificationPoller&quot;:{&quot;messaging_keys&quot;:[],&quot;token&quot;:&quot;&quot;,&quot;inbox_unread&quot;:0},&quot;DesktopDashboardLogo&quot;:{&quot;animations&quot;:[[&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1.png?_v=161861acded461bb6e995593a3bae835&quot;,&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1@2x.png?_v=496a774637302a598c851381d00009b0&quot;]]},&quot;TumblelogIframe&quot;:{&quot;unified&quot;:true,&quot;variant&quot;:null,&quot;isCompact&quot;:true,&quot;tumblelogBundleSrc&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.build.js?_v=67fbead607764bb56fdea64cc12b80d7&quot;,&quot;tumblelogName&quot;:&quot;xueprevs&quot;,&quot;isLoggedIn&quot;:false,&quot;isFriend&quot;:false,&quot;formKey&quot;:&quot;&quot;,&quot;canSubscribe&quot;:false,&quot;isSubscribed&quot;:false,&quot;tumblelogTitle&quot;:&quot;xueprevs&quot;,&quot;tumblelogAvatar&quot;:&quot;https:\/\/assets.tumblr.com\/images\/default_avatar\/pyramid_open_64.png&quot;,&quot;tumblelogAvatar128&quot;:&quot;https:\/\/assets.tumblr.com\/images\/default_avatar\/pyramid_open_128.png&quot;,&quot;tumblelogHost&quot;:&quot;https:\/\/xueprevs.tumblr.com&quot;,&quot;hasCustomDomain&quot;:false,&quot;isOptica&quot;:false,&quot;isCustomTheme&quot;:true,&quot;themeHeaderImage&quot;:&quot;https:\/\/64.media.tumblr.com\/e6b76157375ddc451354db956f6da559\/5bf173a345af195d-d0\/s2048x3072\/434854a6647ea12097000a0d693b1279d907b8b1.png&quot;,&quot;themeBackgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;themeTitleColor&quot;:&quot;#000000&quot;,&quot;themeAccentColor&quot;:&quot;#00B8FF&quot;,&quot;brag&quot;:false,&quot;canShowAd&quot;:true,&quot;isPremium&quot;:false,&quot;showLrecAds&quot;:false,&quot;showStickyLrecBackfill&quot;:false,&quot;showGeminiAds&quot;:false,&quot;geminiSectionCodeDesktop&quot;:&quot;a10bca9c-0c5d-4a02-ab13-14ab8513d81d&quot;,&quot;geminiSectionCodeMobile&quot;:&quot;ced63809-b609-4aca-96a0-abc099acba6b&quot;,&quot;currentPageType&quot;:null,&quot;currentPage&quot;:false,&quot;searchQuery&quot;:&quot;&quot;,&quot;tag&quot;:&quot;&quot;,&quot;query&quot;:&quot;&quot;,&quot;chrono&quot;:false,&quot;postId&quot;:&quot;&quot;,&quot;src&quot;:&quot;https:\/\/xueprevs.tumblr.com\/quartz&quot;,&quot;postUrl&quot;:&quot;&quot;,&quot;openInPeeprUrl&quot;:&quot;https:\/\/www.tumblr.com\/xueprevs&quot;,&quot;isBlocked&quot;:null,&quot;isAdmin&quot;:false,&quot;lookupButtonUrl&quot;:&quot;&quot;,&quot;showSpamButton&quot;:false,&quot;showRootPostButton&quot;:false,&quot;rootPostUrl&quot;:&quot;&quot;,&quot;showRadarPostButton&quot;:false,&quot;radarKeys&quot;:&quot;&quot;,&quot;isUniblocked&quot;:false,&quot;isNsfw&quot;:false,&quot;isAdult&quot;:false,&quot;isSpam&quot;:false,&quot;isPrimaryBlog&quot;:false,&quot;canEdit&quot;:false,&quot;canReblogSelf&quot;:false,&quot;showLikeButton&quot;:false,&quot;showReblogButton&quot;:false,&quot;reblogUrl&quot;:&quot;&quot;,&quot;showMessagingButton&quot;:false,&quot;loginCheckIframeSrc&quot;:&quot;https:\/\/assets.tumblr.com\/assets\/html\/iframe\/login_check.html?_v=3de94a184d600617102ddd5b48fb36e9&quot;,&quot;appInstallUrls&quot;:{&quot;android&quot;:&quot;https:\/\/play.google.com\/store\/apps\/details?id=com.tumblr\u0026referrer=utm_source%3Dtumblr%26utm_medium%3Diframe%26utm_campaign%3Dbn_continue_or_install_cta&quot;,&quot;ios&quot;:&quot;https:\/\/apps.apple.com\/app\/apple-store\/id305343404?pt=212308\u0026ct=bn_continue_or_install_cta\u0026mt=8&quot;},&quot;appOpenReferrer&quot;:&quot;bn_header_open_btn&quot;,&quot;isShowSearch&quot;:true,&quot;supplyLogging&quot;:[],&quot;secondsSinceLastActivity&quot;:-1,&quot;installUrlOpenFailed&quot;:{&quot;android&quot;:&quot;https:\/\/play.google.com\/store\/apps\/details?id=com.tumblr\u0026referrer=utm_source%3Dtumblr%26utm_medium%3Diframe%26utm_campaign%3Dbn_header_app_open_failed&quot;,&quot;ios&quot;:&quot;https:\/\/apps.apple.com\/app\/apple-store\/id305343404?pt=212308\u0026ct=bn_header_app_open_failed\u0026mt=8&quot;},&quot;loginWallVariant&quot;:&quot;small_center&quot;},&quot;CommunityLabels&quot;:{&quot;has_community_label&quot;:false,&quot;is_single&quot;:true,&quot;redirect_target&quot;:null}},&quot;Flags&quot;:{&quot;features&quot;:&quot;eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwibW9iaWxlX3dlYl9nYXRlIjp0cnVlLCJzYWZlX21vZGUiOnRydWUsInNhZmVfbW9kZV9lbmFibGVkIjp0cnVlLCJrZXljb21tYW5kX2F1dG9fcGFnaW5hdGUiOnRydWUsImxvZ2dlZF9vdXRfc2VhcmNoIjp0cnVlLCJrcmFrZW5fd2ViX2xvZ2dpbmdfbGlicmFyeSI6dHJ1ZSwibGl2ZXBob3Rvc193ZWIiOnRydWUsInVzZXJfdGFnX2ZpbHRlcmluZyI6dHJ1ZSwic2FmZV9tb2RlX293bl9wb3N0Ijp0cnVlLCJwcm9qZWN0X3hfYXBwZWFsIjp0cnVlLCJtb2JpbGVfd2ViX3Bob3Rvc2V0cyI6dHJ1ZSwiaGlkZV9kZWZhdWx0X2hlYWRlcnNfYmxvZ19jYXJkcyI6dHJ1ZSwibm90aWZpY2F0aW9uX3JlcGx5X2xpbmtfdG9fbm90ZXMiOnRydWUsInR5cGluZ19pbmRpY2F0b3Jfd3JpdGUiOnRydWUsInR1bWJscl92aWRlb19zcG9uc29yZWRfZGF5Ijp0cnVlLCJjYXB0Y2hhOnVzZV9yZWNhcHRjaGEyIjp0cnVlLCJsaXR0bGVfc2lzdGVyIjp0cnVlLCJsb2dfbGFkeSI6dHJ1ZSwianNfcGVyZm9ybWFuY2VfbG9nZ2luZyI6dHJ1ZSwicmVkcG9wX3Bvc3RfZm9ybV9tb2JpbGVfY3JlYXRlIjp0cnVlLCJsZWdhY3lfcG9zdF9mb3JtX2J1dHRvbnNfbGlua190b19yZWRwb3AiOnRydWUsInNob3dfdHNwX2NsaWNrX3Rocm91Z2hfdG9nZ2xlIjp0cnVlLCJkYXJsYV9hZF9mZWVkYmFjayI6dHJ1ZSwic3RhdHVzX2luZGljYXRvciI6dHJ1ZSwiY29udmVyc2F0aW9uYWxfbm90aWZpY2F0aW9ucyI6dHJ1ZSwiZGlzYWJsZV95YWhvb19iX2Nvb2tpZSI6dHJ1ZSwibGl2ZXBob3RvcyI6dHJ1ZSwiY29tbXVuaXR5X2xhYmVscyI6dHJ1ZX0=&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1711920914000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;hosts&quot;:{&quot;assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;secure_assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;secure_www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;embed_host&quot;:&quot;https:\/\/embed.tumblr.com&quot;,&quot;safe_host&quot;:&quot;https:\/\/safe.txmblr.com&quot;,&quot;platform_host&quot;:&quot;https:\/\/platform.tumblr.com&quot;},&quot;language&quot;:&quot;es_ES&quot;,&quot;language_simple&quot;:&quot;es&quot;,&quot;assets&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/&quot;},&quot;Translations&quot;:{&quot;Cancel&quot;:&quot;Cancelar&quot;,&quot;Nevermind&quot;:&quot;Cancelar&quot;,&quot;Ignore&quot;:&quot;Ignorar&quot;,&quot;Unfollow&quot;:&quot;Dejar de seguir&quot;,&quot;Are you sure you want to unfollow %1$s?&quot;:&quot;\u00bfSeguro que quieres dejar de seguir a %1$s?&quot;,&quot;Sorry, we seem to be having technical trouble.  Please try again later.&quot;:&quot;Lo sentimos, parece que estamos experimentando problemas t\u00e9cnicos. Vuelve a intentarlo m\u00e1s tarde.&quot;,&quot;Follow&quot;:&quot;Seguir&quot;,&quot;Follow %1$s&quot;:&quot;Seguir a %1$s&quot;,&quot;Put it back&quot;:&quot;Vuelve a tu sitio&quot;,&quot;See all&quot;:&quot;Ver todas&quot;,&quot;Block&quot;:&quot;Bloquear&quot;,&quot;%1$sAre you sure you want to block %2$s from %3$s?%4$sThey won&#039;t be able to follow %3$s, send %3$s messages, see %3$s in search results, or interact with any of %3$s&#039;s posts.%5$s&quot;:&quot;%1$s\u00bfSeguro que quieres bloquear a %2$s de %3$s?%4$sNo podr\u00e1 seguir a %3$s, enviar mensajes a %3$s, ver a %3$s en los resultados de b\u00fasqueda o interactuar de forma alguna con las publicaciones de %3$s.%5$s&quot;,&quot;%1$sBlock messages from this sender?%2$sAny further messages sent from their IP address will be blocked from your inbox. This can&#039;t be undone, by the way.%3$s&quot;:&quot;\u00bf%1$sQuieres bloquear los mensajes de este remitente?%2$sDejar\u00e1s de recibir mensajes enviados desde su misma direcci\u00f3n IP en tu bandeja de entrada. No olvides que no es posible deshacer este cambio.%3$s&quot;,&quot;Okay! We&#039;ll review the status of this and email you when we&#039;re done.&quot;:&quot;\u00a1Perfecto! Analizaremos el caso y te enviaremos un correo electr\u00f3nico cuando el proceso haya terminado.&quot;,&quot;This is marked as sensitive content. If that seems like a mistake, you can request a review.&quot;:&quot;Esta publicaci\u00f3n est\u00e1 marcada como contenido delicado. Si crees que se trata de un error, puedes pedirnos que la revisemos.&quot;,&quot;Request Review&quot;:&quot;Solicitar revisi\u00f3n&quot;,&quot;This post is still marked as sensitive, but is currently being reviewed.&quot;:&quot;Esta publicaci\u00f3n sigue marcada como contenido delicado, pero la estamos revisando.&quot;,&quot;After review, it was determined that this post contains sensitive content.&quot;:&quot;Tras revisarlo, hemos corroborado que el contenido de esta publicaci\u00f3n puede ser delicado.&quot;,&quot;This is marked as %1$ssensitive%2$s&quot;:&quot;Esta publicaci\u00f3n incluye %1$scontenido delicado%2$s&quot;,&quot;This Tumblr may contain sensitive media.&quot;:&quot;El contenido de este Tumblr puede ser delicado.&quot;,&quot;Sensitive posts are hidden. If you want to change that, disable Safe Mode in your settings.&quot;:&quot;Las publicaciones con contenidos que pueden resultar delicados est\u00e1n ocultas. Para mostrarlas, desactiva el modo seguro en el apartado de configuraci\u00f3n.&quot;,&quot;Hey, this post may contain sexually explicit content, so we&#039;ve hidden it from public view.&quot;:&quot;Es posible que esta publicaci\u00f3n incluya contenido sexual expl\u00edcito y, por eso, la hemos ocultado.&quot;,&quot;Learn more&quot;:&quot;M\u00e1s informaci\u00f3n&quot;,&quot;%1$sLearn more%2$s&quot;:&quot;%1$sM\u00e1s informaci\u00f3n%2$s&quot;,&quot;Safe Mode is on&quot;:&quot;Modo seguro activado&quot;,&quot;%1$sSafe mode is on%2$s&quot;:&quot;%1$sModo seguro activado%2$s&quot;,&quot;View this Tumblr&quot;:&quot;Ver este Tumblr&quot;,&quot;This content contains sexually explicit content which violates our Community Guidelines.&quot;:&quot;Esta publicaci\u00f3n incluye contenido sexual expl\u00edcito y, por tanto, infringe las Normas de la comunidad.&quot;,&quot;This post was flagged because we think it contains sexually explicit content which violates our Community Guidelines. It has been hidden from others, but not deleted. If you think this was done in error, tap Appeal and a real, live human will review it.&quot;:&quot;Hemos marcado esta publicaci\u00f3n porque creemos que incluye contenido sexual expl\u00edcito y, por lo tanto, incumple las Normas de la comunidad. De momento, est\u00e1 oculta para el resto de personas, pero no la hemos eliminado. Si crees que se trata de un error, utiliza el bot\u00f3n para solicitar una revisi\u00f3n y nuestro equipo se encargar\u00e1 de comprobarla.&quot;,&quot;Your post is in content appeal. Once a decision has been made, we&#039;ll send you an email.&quot;:&quot;Esta publicaci\u00f3n se encuentra en revisi\u00f3n. Te enviaremos un correo electr\u00f3nico cuando hayamos tomado una decisi\u00f3n.&quot;,&quot;This post was flagged because it contains sexually explicit content which violates our Community Guidelines. It has not been deleted but is now only viewable to you. This decision cannot be appealed.&quot;:&quot;Hemos marcado esta publicaci\u00f3n porque incluye contenido sexual expl\u00edcito y, por lo tanto, incumple las Normas de la comunidad. No la hemos eliminado, pero, a partir de ahora, solo podr\u00e1s verla t\u00fa. Esta decisi\u00f3n es definitiva y no podr\u00e1s solicitar que se revise.&quot;,&quot;This post was flagged because somewhere in your reblog there might be sexually explicit content which is a violation of our Community Guidelines.&quot;:&quot;Hemos marcado esta publicaci\u00f3n porque el reblogueo inclu\u00eda contenido sexual expl\u00edcito y, por lo tanto, incumpl\u00eda las Normas de la comunidad.&quot;,&quot;This reblog is in content appeal&quot;:&quot;Este reblogueo se ha enviado al equipo de revisi\u00f3n&quot;,&quot;Your post is in content appeal&quot;:&quot;Tu contenido se ha enviado al equipo de revisi\u00f3n&quot;,&quot;This post was flagged because somewhere in your reblog there might be sexually explicit content.&quot;:&quot;Hemos marcado esta publicaci\u00f3n porque parece que el reblogueo inclu\u00eda contenido sexual expl\u00edcito.&quot;,&quot;It looks like your post might be in violation of our Community Guidelines and is now hidden.&quot;:&quot;Parece que tu publicaci\u00f3n podr\u00eda incumplir nuestras Normas de la comunidad, as\u00ed que hemos decidido ocultarla.&quot;,&quot;Based on our Community Guidelines this post contains sexually explicit content and is now only viewable to you.&quot;:&quot;Seg\u00fan nuestras Normas de la comunidad, esta publicaci\u00f3n incluye contenido sexual expl\u00edcito y, a partir de ahora, solo t\u00fa podr\u00e1s verla.&quot;,&quot;Your appeal was accepted! This post is no longer hidden.&quot;:&quot;Hemos valorado tu solicitud de revisi\u00f3n y \u00a1ten\u00edas raz\u00f3n! Este contenido ya no est\u00e1 oculto.&quot;,&quot;Dismiss&quot;:&quot;Descartar&quot;,&quot;Appeal&quot;:&quot;Solicitar revisi\u00f3n&quot;,&quot;This post contains filtered tags&quot;:&quot;Esta publicaci\u00f3n contiene etiquetas filtradas&quot;,&quot;Are you sure you want to log out?&quot;:&quot;\u00bfSeguro que quieres cerrar la sesi\u00f3n?&quot;,&quot;Likes&quot;:&quot;Me gusta&quot;,&quot;Following&quot;:&quot;Siguiendo&quot;,&quot;New&quot;:&quot;A\u00f1adir blog&quot;,&quot;Account&quot;:&quot;Cuenta&quot;,&quot;Settings&quot;:&quot;Configuraci\u00f3n&quot;,&quot;Help&quot;:&quot;Ayuda&quot;,&quot;Log out&quot;:&quot;Cerrar sesi\u00f3n&quot;,&quot;Posts&quot;:&quot;Publicaciones&quot;,&quot;Reach&quot;:&quot;Alcance&quot;,&quot;Followers&quot;:&quot;Seguidores&quot;,&quot;Activity&quot;:&quot;Actividad&quot;,&quot;Members&quot;:&quot;Integrantes&quot;,&quot;Drafts&quot;:&quot;Borradores&quot;,&quot;Queue&quot;:&quot;En cola&quot;,&quot;Processing&quot;:&quot;Procesando&quot;,&quot;Review flagged posts&quot;:&quot;Comprobar publicaciones marcadas&quot;,&quot;Analytics&quot;:&quot;Estad\u00edsticas&quot;,&quot;Sponsor&quot;:&quot;Patrocinador&quot;,&quot;Sponsored&quot;:&quot;Patrocinado&quot;,&quot;About Tumblr Ads&quot;:&quot;Acerca de la publicidad en Tumblr&quot;,&quot;Edit appearance&quot;:&quot;Modificar apariencia&quot;,&quot;Your blog info, account info, and recent activity are in these menus.&quot;:&quot;La informaci\u00f3n de tu blog, los datos de tu cuenta y tu actividad reciente se encuentran en estos men\u00fas.&quot;,&quot;Wait, why?&quot;:&quot;Pero \u00bfpor qu\u00e9?&quot;,&quot;Okay, phew&quot;:&quot;\u00a1Ah, vale!&quot;,&quot;Why?&quot;:&quot;\u00bfQu\u00e9 ofrecemos?&quot;,&quot;It&#039;s so you never have to scroll to the top of the dashboard to access this stuff.&quot;:&quot;Lo hemos juntado todo aqu\u00ed para que no tengas que desplazarte hacia la parte superior del Escritorio cada vez que quieras acceder a estas opciones.&quot;,&quot;Ohhh&quot;:&quot;Aaaah&quot;,&quot;Loading\u2026&quot;:&quot;Cargando...&quot;,&quot;%1$s notes&quot;:&quot;%1$s notas&quot;,&quot;%1$s note&quot;:&quot;%1$s nota&quot;,&quot;%1$s views&quot;:&quot;%1$s visitas&quot;,&quot;%1$s view&quot;:&quot;%1$s visita&quot;,&quot;%1$s added this GIF to a post&quot;:&quot;%1$s ha utilizado este GIF en una publicaci\u00f3n&quot;,&quot;%1$s posted this&quot;:&quot;%1$s ha publicado esto&quot;,&quot;%1$s%2$s likes%3$s&quot;:&quot;%1$s%2$s Me gusta%3$s&quot;,&quot;%1$s%2$s like%3$s&quot;:&quot;%1$s%2$s Me gusta%3$s&quot;,&quot;%1$s%2$s reblogs%3$s&quot;:&quot;%1$s%2$s reblogueos%3$s&quot;,&quot;%1$s%2$s reblog%3$s&quot;:&quot;%1$s%2$s reblogueo%3$s&quot;,&quot;%1$s%2$s likes%3$s and %4$s%5$s reblogs%3$s&quot;:&quot;%1$s%2$s Me gusta%3$s y %4$s%5$s reblogueos%3$s&quot;,&quot;%1$s%2$s likes%3$s and %4$s%5$s reblog%3$s&quot;:&quot;%1$s%2$s Me gusta%3$s y %4$s%5$s reblogueo%3$s&quot;,&quot;%1$s%2$s like%3$s and %4$s%5$s reblogs%3$s&quot;:&quot;%1$s%2$s Me gusta%3$s y %4$s%5$s reblogueos%3$s&quot;,&quot;Reply&quot;:&quot;Responder&quot;,&quot;Add to the discussion&quot;:&quot;Comparte tu opini\u00f3n&quot;,&quot;Unleash a compliment&quot;:&quot;Haz un cumplido&quot;,&quot;Have something to say?&quot;:&quot;\u00bfAlgo que decir?&quot;,&quot;Reply your heart out&quot;:&quot;Abre tu coraz\u00f3n&quot;,&quot;Add something wonderful&quot;:&quot;Comparte algo espectacular&quot;,&quot;Send something nice&quot;:&quot;Di algo bonito&quot;,&quot;Your words here&quot;:&quot;Aqu\u00ed es donde van las palabras&quot;,&quot;Say your thing&quot;:&quot;\u00bfAlgo que decir?&quot;,&quot;Block %1$s&quot;:&quot;Bloquear a %1$s&quot;,&quot;Report&quot;:&quot;Denunciar&quot;,&quot;%1$sReport %2$s&#039;s post?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$s\u00bfSeguro que quieres denunciar el blog de %2$s?%3$sSi infringe las normas de la comunidad, lo eliminaremos.%4$s&quot;,&quot;%1$sReport %2$s&#039;s reply?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$s\u00bfSeguro que quieres denunciar el blog de %2$s?%3$sSi infringe las normas de la comunidad, lo eliminaremos.%4$s&quot;,&quot;Hide note&quot;:&quot;Ocultar nota&quot;,&quot;Delete reply&quot;:&quot;Borrar respuesta&quot;,&quot;%1$sYou definitely want to hide this note?%2$s&quot;:&quot;%1$s\u00bfSeguro que quieres ocultar esta nota?%2$s&quot;,&quot;%1$sYou definitely want to delete this reply?%2$s&quot;:&quot;%1$s\u00bfSeguro que quieres borrar esta respuesta?%2$s&quot;,&quot;%1$sDelete your tip??%2$s&quot;:&quot;%1$s\u00bfQuieres eliminar la propina?%2$s&quot;,&quot;Deleting your tip&quot;:&quot;Al hacerlo, solo la borrar\u00e1s de la pesta\u00f1a de las respuestas y de las notas. %1$sNo recibir\u00e1s ning\u00fan reembolso por tu propina%2$s. Si necesitas ayuda o tienes alguna otra pregunta, %3$sescribe al equipo de asistencia de Tumblr%4$s.&quot;,&quot;Hide it&quot;:&quot;S\u00ed, ocultadla&quot;,&quot;Delete it&quot;:&quot;S\u00ed, borradla&quot;,&quot;Search&quot;:&quot;Buscar&quot;,&quot;Search %s&quot;:&quot;Buscar en %s&quot;,&quot;Fan mail&quot;:&quot;Carta de fan&quot;,&quot;Message&quot;:&quot;Mensaje&quot;,&quot;Like&quot;:&quot;Me gusta&quot;,&quot;Unlike&quot;:&quot;Ya no me gusta&quot;,&quot;Reblog&quot;:&quot;Rebloguear&quot;,&quot;Embed&quot;:&quot;Insertar&quot;,&quot;Edit&quot;:&quot;Editar&quot;,&quot;Delete&quot;:&quot;Borrar&quot;,&quot;Get notifications&quot;:&quot;Recibir notificaciones&quot;,&quot;Stop notifications&quot;:&quot;Dejar de recibir notificaciones&quot;,&quot;Flag this blog&quot;:&quot;Marcar blog&quot;,&quot;Sign up&quot;:&quot;Reg\u00edstrate&quot;,&quot;Sign up for Tumblr&quot;:&quot;Reg\u00edstrate en Tumblr&quot;,&quot;Log in&quot;:&quot;Inicia sesi\u00f3n&quot;,&quot;You&#039;ll never be bored again.&quot;:&quot;Jam\u00e1s volver\u00e1s a aburrirte.&quot;,&quot;Discover more blogs like this one.&quot;:&quot;Descubre otros blogs parecidos.&quot;,&quot;Install the app&quot;:&quot;Instalar la aplicaci\u00f3n&quot;,&quot;Open in app&quot;:&quot;Abrir en la aplicaci\u00f3n&quot;,&quot;Dashboard&quot;:&quot;Escritorio&quot;,&quot;Open in Dashboard&quot;:&quot;Abrir en el Escritorio&quot;,&quot;Get the Tumblr app&quot;:&quot;Descarga la aplicaci\u00f3n de Tumblr&quot;,&quot;Are you sure you want to delete this post?&quot;:&quot;\u00bfSeguro que quieres borrar esta\u00a0publicaci\u00f3n?&quot;,&quot;Never miss a post&quot;:&quot;\u00a1No te pierdas ni una publicaci\u00f3n!&quot;,&quot;Accept&quot;:&quot;Aceptar&quot;,&quot;Privacy \u0026 Cookies&quot;:&quot;Privacidad y cookies&quot;,&quot;By using this site, you&#039;re agreeing to the use of analytics and other types of cookies. Click accept here, and cookies will also show you personalized ads from across the Automattic\/Wordpress.com network.&quot;:&quot;Al utilizar esta p\u00e1gina, muestras tu consentimiento para que almacenemos datos estad\u00edsticos y otro tipo de cookies. Haz clic aqu\u00ed para aceptar y las cookies tambi\u00e9n te mostrar\u00e1n anuncios personalizados de toda la red de Automattic y Wordpress.com.&quot;,&quot;Get the app&quot;:&quot;Descarga la aplicaci\u00f3n&quot;,&quot;Open in the app store?&quot;:&quot;\u00bfQuieres abrir la tienda de aplicaciones?&quot;,&quot;%1$s, a blog on Tumblr.&quot;:&quot;%1$s, un flamante blog de Tumblr.&quot;,&quot;No thanks&quot;:&quot;No, gracias&quot;,&quot;Never miss a post from %1$s&quot;:&quot;No te pierdas ni una publicaci\u00f3n de %1$s&quot;,&quot;Make gifs, find your community. Only in the app.&quot;:&quot;Crea gifs y encuentra a gente que comparte tus intereses en la aplicaci\u00f3n.&quot;,&quot;Close&quot;:&quot;Cerrar&quot;,&quot;Image Description&quot;:&quot;Descripci\u00f3n de la imagen&quot;}}"></noscript>
+    <script src="https://assets.tumblr.com/client/prod/standalone/tumblelog/index.build.js?_v=67fbead607764bb56fdea64cc12b80d7"></script>
+    </body>
+
+    <!-- scripts and stuff ---------------------------->
+
+    <!-- cappuccicons by suiomi -->
+    <!-- https://cappuccicons.com/ -->
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredoka+One&family=Nunito&family=Yeseva+One&display=swap" rel="stylesheet">
+
+    <!--tooltips-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+    <script>
+        (function($) {
+            $(document).ready(function() {
+                $("a[title]").style_my_tooltips({
+                    tip_follows_cursor: true,
+                    tip_delay_time: 0,
+                    tip_fade_speed: 300,
+                    attribute: "title"
+                });
+            });
+        })(jQuery);
+    </script>
+
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(".hbtn-one").click(function() {
+                $(".hbtn-one").addClass("hbtn-active");
+                $(".hbtn-two").removeClass("hbtn-active");
+                $(".hbtn-three").removeClass("hbtn-active");
+                $(".hbtn-four").removeClass("hbtn-active");
+                $(".allviews").css("margin-left", "0");
+            });
+
+            $(".hbtn-two").click(function() {
+                $(".hbtn-one").removeClass("hbtn-active");
+                $(".hbtn-two").addClass("hbtn-active");
+                $(".hbtn-three").removeClass("hbtn-active");
+                $(".hbtn-four").removeClass("hbtn-active");
+                $(".allviews").css("margin-left", "-500px");
+            });
+
+            $(".hbtn-three").click(function() {
+                $(".hbtn-one").removeClass("hbtn-active");
+                $(".hbtn-two").removeClass("hbtn-active");
+                $(".hbtn-three").addClass("hbtn-active");
+                $(".hbtn-four").removeClass("hbtn-active");
+                $(".allviews").css("margin-left", "-1000px");
+            });
+
+            $(".hbtn-four").click(function() {
+                $(".hbtn-one").removeClass("hbtn-active");
+                $(".hbtn-two").removeClass("hbtn-active");
+                $(".hbtn-three").removeClass("hbtn-active");
+                $(".hbtn-four").addClass("hbtn-active");
+                $(".allviews").css("margin-left", "-1500px");
+            });
+
+            $(".qna-qn").click(function() {
+                var locationA = $(this).parent();
+                $(".qna-qn", locationA).toggleClass("qna-qn-active");
+                $(".qna-ans", locationA).slideToggle();
+            });
+
+        }); /** jquery the end **/
+    </script>
+
+    <!-- masonry -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="/path/to/masonry.pkgd.min.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('.tag-con').masonry({
+                // options
+                itemSelector: '.tag-block'
+            });
+        });
+    </script>
+
+</html>
+
+
+
+<!----- 【 MUSIC PLAYER #08 by @glenthemes 】 ----->
+<link href="//glen-players.gitlab.io/08/setup.css" rel="stylesheet">
+<script src="//glen-players.gitlab.io/08/init.js"></script>
+<div glenplayer08>
+	<img album-image src="https://i.ibb.co/frkQL8W/klipartz-com.png">
+	
+	<div music-info>
+		<div song-name>  </div>
+		<div artist-name>  </div>
+	</div><!--don't delete this line :)-->
+	
+	<audio src="assets/0.mp3" volume="85%"></audio>
+</div><!--don't delete this line-->
+<!---- END MUSIC PLAYER ---->
+<!-- partial -->
+  
+</body>
+</html>
